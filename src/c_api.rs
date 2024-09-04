@@ -55,6 +55,11 @@ impl Buffer {
             rec,
         }
     }
+
+    #[cfg(feature = "test")]
+    pub fn to_slice(&self) -> &[u8] {
+        unsafe { slice::from_raw_parts(self.ptr, self.len) }
+    }
 }
 
 impl From<Vec<u8>> for Buffer {
