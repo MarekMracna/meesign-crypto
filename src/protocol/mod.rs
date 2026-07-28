@@ -1,3 +1,4 @@
+pub mod dkls23;
 pub mod elgamal;
 pub mod frost;
 pub mod gg18;
